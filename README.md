@@ -11,7 +11,7 @@
 ___
 > **Krushkal's Algorithm**  
 ___
-*[Get Code Link Here](https://github.com/NiviRocks/DataStructureAlgorithms/blob/cf6179890712dc5922da9171fa934cdad2510f7b/Krushklals.c)*
+*[Get Code Link Here](https://github.com/NiviRocks/GraphAlgos/blob/main/Krushklals.c)*
  - This algorithm finds the Minimum Spanning Tree (MST) for a connected undirected weighted Graph. 
  - The algorithm uses structure to represent graph:
  ```

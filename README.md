@@ -47,4 +47,4 @@ ___
    succesfully added all nodes in graph
    start-> 1 2 3 4 5 None 6 7 None None None 8 9 <-End
    ```
- - Time complexity of the Algorithm is: `O(V^2)`  where V is the number of vertices
+ - Time complexity of the Algorithm is: `O(V+E)`  where V is the number of vertices and E is the number of Edges

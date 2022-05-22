@@ -47,3 +47,10 @@ class Graph:
             return
         Graph.Display_BFS(Graph.queue[Graph.front]) #go to next node
     
+g=[1,2,3,4,5,None,6,7,None,None,None,8,9]
+Graph.addNodes(g)
+Graph.Display_BFS()
+''' output : 
+succesfully added all nodes in graph
+start-> 1 2 3 4 5 None 6 7 None None None 8 9 <-End 
+'''

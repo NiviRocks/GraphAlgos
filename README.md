@@ -26,3 +26,24 @@ ___
  - Time complexity of the Algorithm is: `O(E.logE)`  
    here, ***log*** represents *log (base 2)* and ***E*** is number of Edges in Graph
  - Output is displays edges in order of selection and their corresponding weights.  
+___
+> **Breadth First Search (BFS) Algorithm**  
+___
+*[Get Code Link Here](https://github.com/NiviRocks/GraphAlgos/blob/main/BFS.py)*
+ - Function ```addNodes(item)``` creates the graph. 
+ - Input should be like ```1,2,3,4,5,None,6,7,None,None,None,8,9``` for graph as below
+ <details><summary>Click Here</summary>  
+    ![image](https://user-images.githubusercontent.com/96379756/169697741-4a6ff4b6-8734-48b0-8dc1-320245c40475.png)
+ </details>
+ - Function ```Display_BFS()``` displays BFS sequence of graph.
+ - Dry Run :  
+   INPUT: 
+   ```g=[1,2,3,4,5,None,6,7,None,None,None,8,9]
+   Graph.addNodes(g)
+   Graph.Display_BFS()
+   ```  
+   OUTPUT:  
+   ```succesfully added all nodes in graph
+   start-> 1 2 3 4 5 None 6 7 None None None 8 9 <-End
+   ```
+ - Time complexity of the Algorithm is: `O(V^2)`  where V is the number of vertices

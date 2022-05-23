@@ -40,7 +40,9 @@ class Graph:
 
 #__main__
 #Dry Run
-g=[[1,2],[1,4],[2,4],[2,5],[4,7],[4,5],[5,3],[5,1],[5,6],[6,8],[6,3],[8,7]]
+g=[[1,2],[1,4],[2,4],[2,5],[4,7],[4,5],[5,3],[5,1],[5,6],[6,8],[6,3],[8,7]] # this is directed graph
+# for undirected graph each edge has to be given twice
+# Eg:- edge from 1-2 input as [[1,2],[2,1]]
 Graph.graph(g) #create graph
 print("Display Graph")
 Graph.ShowGraph()

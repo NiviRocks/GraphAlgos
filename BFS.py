@@ -18,7 +18,7 @@ class Graph:
     def ShowGraph(): #displays graph
         for i in Graph.Adj_Dict:
             print(i,"->",Graph.Adj_Dict[i])
-    def Display_BFS(curr,count=0): # displays BFS sequence
+    def Display_BFS(curr): # displays BFS sequence
         print(curr,end=" ")
         if curr in Graph.Adj_Dict :
             if curr not in Graph.visited: 
@@ -35,7 +35,7 @@ class Graph:
         if Graph.front==Graph.rear: # no new node to visit
             return
         else:
-            Graph.Display_BFS(Graph.queue[Graph.front],count+1) # go to next node
+            Graph.Display_BFS(Graph.queue[Graph.front]) # go to next node
         return
 
 #__main__
@@ -45,5 +45,5 @@ Graph.graph(g) #create graph
 print("Display Graph")
 Graph.ShowGraph()
 print("BFS Sequence")
-Graph.Display_BFS(1)
+Graph.Display_BFS(1) #passing start node
           

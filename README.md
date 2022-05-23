@@ -33,7 +33,7 @@ ___
  - Function ```addNodes(item)``` creates the graph. 
  - Input should be an Adjecency List  
  - Example of graph is given below <details><summary>Click Here</summary>  
-   <img width="250" height="200" alt="stack" src="https://github.com/NiviRocks/GraphAlgos/blob/main/image/bfs%20graph.jpg">
+   <img width="300" height="200" alt="stack" src="https://github.com/NiviRocks/GraphAlgos/blob/main/image/bfs%20graph.png">
    </details>
  - Function ```Display_BFS(curr)``` displays BFS sequence of graph, takes parameter curr as starting node.
  - Dry Run :  

@@ -39,9 +39,12 @@ ___
  - Dry Run :  
    INPUT: 
    ```
-   g=[1,2,3,4,5,None,6,7,None,None,None,8,9]
-   Graph.addNodes(g)
-   Graph.Display_BFS()
+   g=[[1,2],[1,4],[2,4],[2,5],[4,7],[4,5],[5,3],[5,1],[5,6],[6,8],[6,3],[8,7]]
+   Graph.graph(g) 
+   print("Display Graph")
+   Graph.ShowGraph()
+   print("BFS Sequence")
+   Graph.Display_BFS(1)
    ```  
    OUTPUT:  
    ```

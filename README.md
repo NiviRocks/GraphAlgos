@@ -35,7 +35,7 @@ ___
  - Example of graph is given below <details><summary>Click Here</summary>  
    <img width="250" height="200" alt="stack" src="https://github.com/NiviRocks/GraphAlgos/blob/main/image/bfs%20graph.jpg">
    </details>
- - Function ```Display_BFS()``` displays BFS sequence of graph.
+ - Function ```Display_BFS(curr)``` displays BFS sequence of graph, takes parameter curr as starting node.
  - Dry Run :  
    INPUT: 
    ```

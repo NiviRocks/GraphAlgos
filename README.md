@@ -31,7 +31,8 @@ ___
 ___
 *[Get Code Link Here](https://github.com/NiviRocks/GraphAlgos/blob/main/BFS.py)*
  - Function ```addNodes(item)``` creates the graph. 
- - Input should be like ```1,2,3,4,5,None,6,7,None,None,None,8,9``` for graph as below <details><summary>Click Here</summary>  
+ - Input should be an Adjecency List  
+ - Example of graph is given below <details><summary>Click Here</summary>  
    <img width="250" height="200" alt="stack" src="https://github.com/NiviRocks/GraphAlgos/blob/main/image/bfs%20graph.jpg">
    </details>
  - Function ```Display_BFS()``` displays BFS sequence of graph.

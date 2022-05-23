@@ -48,7 +48,14 @@ ___
    ```  
    OUTPUT:  
    ```
-   succesfully added all nodes in graph
-   start-> 1 2 3 4 5 None 6 7 None None None 8 9 <-End
+   Display Graph
+   1 -> [2, 4]
+   2 -> [4, 5]
+   4 -> [7, 5]
+   5 -> [3, 1, 6]
+   6 -> [8, 3]
+   8 -> [7]
+   BFS Sequence
+   1 2 4 5 7 3 6 8 
    ```
  - Time complexity of the Algorithm is: `O(V+E)`  where V is the number of vertices and E is the number of Edges

@@ -1,56 +1,49 @@
-class Node:
-    def __init__(self,data=None):
-        self.data=data
-        self.right=None
-        self.left=None
-        
+"""
+BFS graph using Adjecency List
+"""
 class Graph:
-    start=Node()
-    queue=[]
+    queue=[] #keeps order of BFS tree
+    visited=[] #keeps visited node 
+    # front and rear for accessing queue
     front=0
-    def addNodes(item):
-        # nodes added in BFS order
-        i=0
-        curr=Graph.start
-        Graph.queue.append(curr) #add start in queue
-        while i <len(item):
-            if i%2!=0: #left node occur in odd places in BFS
-                curr.left=Node(item[i])
-                Graph.queue.append(curr.left)
+    rear=0
+    # stores Adjecency List as dictionary
+    Adj_Dict={}
+    def graph(Adj_Mtx): #converts Adj_MTX into Adj_Dict
+        for i in Adj_Mtx:
+            if i[0] not in Graph.Adj_Dict:
+                Graph.Adj_Dict[i[0]]=[i[1]]
             else:
-                #right node occur in even places in BFS
-                curr.right=Node(item[i]) 
-                Graph.queue.append(curr.right)
-            Graph.front+=1   
-            #print(Graph.front,Graph.queue)
-            curr=Graph.queue[Graph.front]
-            i+=1
-        Graph.queue=[]
-        Graph.front=0
-        print("succesfully added all nodes in graph")
-    def Display_BFS(curr="start"):
-        if curr=="start":
-            curr=Graph.start
-            Graph.queue.append(curr) #add start to queue
-            print("start->",end=" ") 
-        # left child   
-        if curr.left!=None and curr.left not in Graph.queue:
-            Graph.queue.append(curr.left)
-        #right child
-        if curr.right!=None and curr.right not in Graph.queue:
-            Graph.queue.append(curr.right)
-        #display data for current node other that start
-        if curr!=Graph.start: print(curr.data,end=" ") 
-        Graph.front+=1 
-        if Graph.front >=len(Graph.queue): 
-            print("<-End")
+                Graph.Adj_Dict[i[0]].append(i[1])
+    def ShowGraph(): #displays graph
+        for i in Graph.Adj_Dict:
+            print(i,"->",Graph.Adj_Dict[i])
+    def Display_BFS(curr,count=0): # displays BFS sequence
+        print(curr,end=" ")
+        if curr in Graph.Adj_Dict :
+            if curr not in Graph.visited: 
+                Graph.visited.append(curr) 
+                Graph.queue.append(curr) 
+                Graph.rear+=1
+            for i in Graph.Adj_Dict[curr]: # iterate over all neighbours of curr
+                if i not in Graph.visited: 
+                    Graph.queue.append(i)
+                    Graph.visited.append(i)
+                    Graph.rear+=1            
+        Graph.queue[Graph.front]=-1 # all nodes adjecent to curr are visited
+        Graph.front+=1
+        if Graph.front==Graph.rear: # no new node to visit
             return
-        Graph.Display_BFS(Graph.queue[Graph.front]) #go to next node
-    
-g=[1,2,3,4,5,None,6,7,None,None,None,8,9]
-Graph.addNodes(g)
-Graph.Display_BFS()
-''' output : 
-succesfully added all nodes in graph
-start-> 1 2 3 4 5 None 6 7 None None None 8 9 <-End 
-'''
+        else:
+            Graph.Display_BFS(Graph.queue[Graph.front],count+1) # go to next node
+        return
+
+#__main__
+#Dry Run
+g=[[1,2],[1,4],[2,4],[2,5],[4,7],[4,5],[5,3],[5,1],[5,6],[6,8],[6,3],[8,7]]
+Graph.graph(g) #create graph
+print("Display Graph")
+Graph.ShowGraph()
+print("BFS Sequence")
+Graph.Display_BFS(1)
+          
